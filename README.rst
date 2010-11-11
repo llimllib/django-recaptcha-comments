@@ -8,3 +8,5 @@ TODO:
 
 - Add a demonstration site
 - Document how to use it
+- test setup.py for functionality
+- submit to PyPI
