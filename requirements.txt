@@ -1,1 +1,1 @@
-recaptcha
+recaptcha-client
