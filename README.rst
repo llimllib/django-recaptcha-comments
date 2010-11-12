@@ -10,3 +10,4 @@ TODO:
 - Document how to use it
 - test setup.py for functionality
 - submit to PyPI
+- write a paver(?) script to generate the docs (or rake? or just a script?)
