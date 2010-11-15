@@ -1,4 +1,14 @@
 <html><head><title>Hello ReCAPTCHA!</title></head>
 <body>
+{% load comments %}
+
     HELLO DUDES AND LADIES
+
+    {% get_comment_count for homepage as comment_count %}
+    <p>There are currently {{ comment_count }} comments.
+
+    <p>{% render_comment_list for homepage %}
+
+    <p>{% render_comment_form for homepage %}
+    
 </body></html>
