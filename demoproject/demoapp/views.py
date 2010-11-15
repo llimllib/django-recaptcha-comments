@@ -9,3 +9,7 @@ def homepage(request, **kwargs):
                               {'homepage': homepage},
                               #required for CSRF key
                               context_instance=RequestContext(request))
+
+def templatetag(request, **kwargs):
+    return render_to_response('templatetag.html',
+                              context_instance=RequestContext(request))
