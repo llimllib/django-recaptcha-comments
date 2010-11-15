@@ -3,9 +3,12 @@ from django.utils.safestring import mark_safe
 from django.conf import settings
 from recaptcha.client import captcha
 
+#if you want to use different captcha servers, plug them in here
 captcha.API_SERVER="http://www.google.com/recaptcha/api"
 captcha.VERIFY_SERVER="www.google.com/recaptcha/api"
 
+#The ReCaptcha widget is 
+#also derived from [Marco Fucci's code](http://www.marcofucci.com/tumblelog/26/jul/2009/integrating-recaptcha-with-django/)
 class ReCaptcha(forms.widgets.Widget):
     recaptcha_challenge_name = 'recaptcha_challenge_field'
     recaptcha_response_name = 'recaptcha_response_field'
