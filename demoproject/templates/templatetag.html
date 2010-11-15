@@ -1,5 +1,25 @@
+{% load recaptcha_html %}
 <html><head><title>Hello ReCAPTCHA!</title></head>
-    <p>This example simply shows how to use the recaptcha_html template tag
+<body>
+    <p>This example shows how to use the recaptcha_html template tag. Enter a comment
+    and a captcha response, then hit submit to test it out.
 
-    <p>{% load recaptcha_html %} {% recaptcha_html %}
+    {% if comment %}
+        <p>Your comment, "{{ comment }}" had a
+        {% if response %}
+            <font color="green"><b>VALID</b></font>
+        {% else %}
+            <font color="red"><b>INVALID</b></font>
+        {% endif %}
+        captcha response.
+    {% endif %}
+
+    <form action="templatetag.html" method="POST">{% csrf_token %}
+    <table>
+        <tr><td>comment:</td>
+            <td><textarea name="comment" rows="10" cols="40"></textarea></td></tr>
+        <tr><td colspan="2">{% recaptcha_html %}</td></tr>
+        <tr><td colspan="2"><input type="submit"></td></tr>
+    </table>
+    </form>
 </body></html>
