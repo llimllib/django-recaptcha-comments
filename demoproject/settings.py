@@ -11,6 +11,27 @@ root_join = lambda d: os.path.join(PROJECT_DIR, d)
 PROJECT_DIR = os.path.normpath(os.path.dirname(__file__))
 sys.path.insert(0, root_join('..'))
 
+#now we need to add 'recaptcha_comments' to our INSTALLED_APPS. Make sure that
+#django.contrib.comments is in your INSTALLED_APPS list
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.admin',
+
+    'django.contrib.comments',
+
+    'recaptcha_comments',
+
+    'demoapp',
+)
+
+#then make sure that we set COMMENTS_APP to recaptcha_comments; this tells
+#django to use our comment form instead of its default comment form
+COMMENTS_APP = 'recaptcha_comments'
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -94,19 +115,3 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     root_join("templates"),
 )
-
-INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.admin',
-    'django.contrib.comments',
-
-    'recaptcha_comments',
-
-    'demoapp',
-)
-
-COMMENTS_APP = 'recaptcha_comments'
