@@ -18,7 +18,7 @@ class ReCaptchaField(forms.CharField):
     }
 
     def __init__(self, *args, **kwargs):
-        #set this field's widget to the one defined in `[[widgets.py]]`
+        #set this field's widget to the one defined in [[widgets.py]]
         self.widget = ReCaptcha
         self.required = True
         self.is_recaptcha = True
