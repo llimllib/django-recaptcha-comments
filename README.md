@@ -11,6 +11,8 @@ I assume that his code was usable as open source; I've licensed this project as 
 TODO:
 
 - Documentation!
+  - link demo app pages to the appropriate documentation
 - test setup.py for functionality
 - submit to PyPI
 - write a paver(?) script to generate the docs (or rake? or just a script?)
+- create a github site for the project
