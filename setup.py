@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name = "django-recaptcha-comments",
-    version = "1",
+    version = "1.0",
     author = "Bill Mill",
     author_email = "bill.mill@gmail.com",
     description = "An application to make it easy for django sites to require reCAPTCHA on comments",
