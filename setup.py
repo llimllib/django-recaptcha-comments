@@ -6,7 +6,7 @@ setup(
     author = "Bill Mill",
     author_email = "bill.mill@gmail.com",
     description = "An application to make it easy for django sites to require reCAPTCHA on comments",
-    long_description = open("README.rst").read(),
+    long_description = open("README.md").read(),
     license = "BSD",
     url = "http://github.com/llimllib/django-recaptcha-comments",
     packages = [
